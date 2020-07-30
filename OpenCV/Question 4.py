@@ -2,11 +2,14 @@
 import numpy as np
 import cv2
 
-img = cv2.imread('shapes.jpg')
-img2 = cv2.imread('shapes.jpg')
+img = cv2.imread('S1.jpg')
+img2 = cv2.imread('S1.jpg')
+
+img = cv2.resize(img,(500,500))
+img2 = cv2.resize(img2,(500,500))
 
 img2 = cv2.cvtColor(img2,cv2.COLOR_BGR2GRAY)
-ret,thresh = cv2.threshold(img2,240,255,cv2.THRESH_BINARY_INV)
+ret,thresh = cv2.threshold(img2,175,255,cv2.THRESH_BINARY_INV)
 
 cv2.imshow("original",img)
 cv2.waitKey(0)
@@ -49,6 +52,12 @@ for cnt in contours:
         shape = "Square"
     elif sides==5:
         shape = "Pentagon"
+    elif sides==6:
+        shape = "Hexagon"
+    elif sides==7:
+        shape = "Heptagon"
+    elif sides==8:
+        shape = "octagon"
     else:
         shape = "Circle"
         
