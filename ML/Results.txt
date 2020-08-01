@@ -1,0 +1,5 @@
+Run 1
+Training Accuracy = 100%
+Training Loss = 1.12 e-07
+Validation Accuracy = 96.15%
+Validation Loss = 45.12
