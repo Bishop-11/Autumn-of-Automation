@@ -1,0 +1,8 @@
+prefix=/home/bishop/Aws/devel
+
+Name: initials
+Description: Description of initials
+Version: 0.0.0
+Cflags: -I/home/bishop/Aws/devel/include -I/home/bishop/Aws/src/initials/include
+Libs: -L${prefix}/lib -linitials
+Requires: roscpp rospy std_msgs turtlesim

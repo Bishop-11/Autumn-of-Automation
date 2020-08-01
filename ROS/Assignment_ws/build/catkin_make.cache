@@ -1,0 +1,2 @@
+initials
+-DCATKIN_DEVEL_PREFIX=/home/bishop/Aws/devel -DCMAKE_INSTALL_PREFIX=/home/bishop/Aws/install -G Unix Makefiles
