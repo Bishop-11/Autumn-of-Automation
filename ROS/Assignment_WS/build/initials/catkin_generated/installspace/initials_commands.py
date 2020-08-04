@@ -1,0 +1,21 @@
+#!/usr/bin/env python2
+import rospy
+from geometry_msgs.msg import Twist
+
+def letter_b():
+    cmds = rospy.Publisher("/turtle/turtle1/cmd_vel",Twist, queue_size = 5)
+    rospy.init_node("initials_commands", anonymous = True)
+    
+    while not rospy.is_shutdown():
+        cmd1 = "[2.0,0.0,0.0]"
+        rospy.loginfo(cmd1)
+        pub.Publish(cmd1)
+
+
+if __name__ == '__main__':
+    try:
+        letter_b()
+    except rospy.ROSInterruptException:
+        pass 
+
+
